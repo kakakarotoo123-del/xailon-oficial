@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>XAILON | Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #020617; overflow-x: hidden; margin: 0; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
+        .gradient-text { background: linear-gradient(135deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-bg { background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent), linear-gradient(to bottom, rgba(2, 6, 23, 0.8), #020617), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .responsive-logo { font-size: clamp(1.3rem, 6vw, 2rem); font-weight: 900; }
+        
+        /* Estilos para inputs más atractivos */
+        .form-input-clean {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .form-input-clean:focus {
+            border-color: #60a5fa;
+            background: rgba(255, 255, 255, 0.06);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+        }
+        .form-label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            margin-left: 0.5rem;
+            color: #60a5fa;
+        }
+
+        /* Botón WhatsApp Flotante (opcional, puedes mantenerlo o quitarlo) */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <a href="https://wa.me/573125443974" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="max-w-6xl mx-auto p-5 flex justify-between items-center relative z-20">
+        <a href="index.html" class="responsive-logo gradient-text px-2">XAILON</a>
+        <div class="flex gap-5 text-xl">
+            <a href="index.html" class="hover:text-blue-400 transition-colors"><i class="fas fa-home"></i></a>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-center pt-12 pb-16 px-4">
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-4">
+            <span class="gradient-text">Contacto</span>
+        </h1>
+        <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+            Envíanos tu mensaje y te responderemos a la brevedad.
+        </p>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-5 pb-20">
+        <div class="glass p-8 md:p-12 rounded-[3rem] border border-white/10 shadow-2xl">
+            <form action="https://formsubmit.co/creacioncreativa45@gmail.com" method="POST" class="space-y-8">
+                <div>
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" name="name" required 
+                           class="form-input-clean w-full px-6 py-4 rounded-2xl text-base md:text-lg" 
+                           placeholder="Juan Pérez">
+                </div>
+                
+                <div>
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" name="email" required 
+                           class="form-input-clean w-full px-6 py-4 rounded-2xl text-base md:text-lg" 
+                           placeholder="juan@ejemplo.com">
+                </div>
+                
+                <div>
+                    <label class="form-label">Teléfono (opcional)</label>
+                    <input type="tel" name="phone" 
+                           class="form-input-clean w-full px-6 py-4 rounded-2xl text-base md:text-lg" 
+                           placeholder="+57 300 123 4567">
+                </div>
+                
+                <div>
+                    <label class="form-label">Mensaje</label>
+                    <textarea name="message" rows="5" required 
+                              class="form-input-clean w-full px-6 py-4 rounded-2xl text-base md:text-lg resize-none" 
+                              placeholder="¿En qué podemos ayudarte?"></textarea>
+                </div>
+                
+                <button type="submit" 
+                        class="w-full py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-black uppercase tracking-[0.3em] text-sm rounded-2xl transition-all shadow-2xl shadow-blue-900/50 flex items-center justify-center gap-3">
+                    <i class="fas fa-paper-plane"></i> ENVIAR MENSAJE
+                </button>
+                
+                <!-- Configuración de FormSubmit -->
+                <input type="hidden" name="_next" value="https://creaciones.xailon.site/">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde XAILON">
+            </form>
+            
+            <p class="text-center text-xs text-slate-500 mt-8">
+                Recibirás una copia de tu mensaje en tu correo.
+            </p>
+        </div>
+    </main>
+
+    <footer class="text-center py-10 border-t border-white/5">
+        <p class="text-xs uppercase tracking-[0.4em] text-slate-500 px-4 italic">© 2026 XAILON | Innovación Digital</p>
+    </footer>
+
+</body>
+</html>
