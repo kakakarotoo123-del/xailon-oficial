@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #020617; color: #e2e8f0; margin: 0; overflow-x: hidden; }
         .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(135deg, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -44,12 +44,14 @@
             </div>
         </div>
 
-        <!-- Sección de contacto con WhatsApp -->
+        <!-- Sección de contacto con WhatsApp (solo logo) -->
         <section class="mt-16 text-center glass p-10 rounded-[3rem] border-cyan-500/20">
             <h2 class="text-2xl font-bold mb-6 italic text-white">¿Hablamos de tu proyecto?</h2>
             <p class="text-slate-400 mb-8 text-sm">Convierte tus ideas en una solución digital funcional hoy mismo.</p>
-            <a href="https://wa.me/573125443974" class="inline-flex items-center justify-center px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-black uppercase tracking-widest rounded-2xl transition-all shadow-lg shadow-cyan-900/40">
-                Contactar por WhatsApp
+            <a href="https://wa.me/573125443974" 
+               class="inline-flex items-center justify-center bg-cyan-600 hover:bg-cyan-500 text-white w-20 h-20 rounded-full hover:scale-110 transition shadow-xl"
+               aria-label="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp text-5xl"></i>
             </a>
         </section>
     </main>
