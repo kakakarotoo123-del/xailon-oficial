@@ -9,11 +9,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #060b18; overflow-x: hidden; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-bg { background-image: linear-gradient(to bottom, rgba(6, 11, 24, 0.9), #060b18), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); background-size: cover; background-position: center; }
-        /* Tamaño de letra fluido para evitar que se corte */
-        .responsive-title { font-size: clamp(2rem, 8vw, 4.5rem); line-height: 1.1; }
+        .card-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.25; z-index: -1; }
+        /* Letra fluida para evitar cortes en el celular */
+        .responsive-title { font-size: clamp(1.8rem, 8vw, 4.5rem); line-height: 1.1; }
         .responsive-logo { font-size: clamp(1.2rem, 5vw, 1.8rem); }
     </style>
 </head>
@@ -34,9 +35,11 @@
         <p class="mt-6 text-slate-400 text-sm md:text-lg max-w-xl mx-auto font-light px-2">Creamos experiencias digitales personalizadas y sistemas eficientes para potenciar tu negocio.</p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24">
+    <main class="max-w-6xl mx-auto px-6 pb-24 text-left">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass p-8 rounded-[2rem] relative overflow-hidden min-h-[300px] flex flex-col justify-end transition-all border border-white/5">
+            
+            <div class="glass p-8 rounded-[2rem] min-h-[320px] flex flex-col justify-end border border-white/5">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="card-img">
                 <div class="relative z-10">
                     <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 border border-blue-500/30"><i class="fas fa-code text-blue-400"></i></div>
                     <h3 class="text-xl font-bold mb-2 text-white">Desarrollo Web</h3>
@@ -44,12 +47,27 @@
                     <a href="web.html" class="text-blue-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2">SABER MÁS <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="glass p-8 rounded-[2rem] min-h-[300px] flex flex-col justify-end border border-white/5">
-                <div class="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 border border-indigo-500/30"><i class="fas fa-laptop-code text-indigo-400"></i></div>
-                <h3 class="text-xl font-bold mb-2 text-white">Sistemas</h3>
-                <p class="text-slate-400 text-xs mb-6">Herramientas diseñadas para mejorar la productividad de tu negocio.</p>
-                <a href="#" class="text-indigo-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2">SABER MÁS <i class="fas fa-arrow-right"></i></a>
+
+            <div class="glass p-8 rounded-[2rem] min-h-[320px] flex flex-col justify-end border border-white/5">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="card-img">
+                <div class="relative z-10">
+                    <div class="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 border border-indigo-500/30"><i class="fas fa-laptop-code text-indigo-400"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Sistemas</h3>
+                    <p class="text-slate-400 text-xs mb-6">Herramientas diseñadas para mejorar la productividad de tu negocio.</p>
+                    <a href="#" class="text-indigo-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2">SABER MÁS <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
+
+            <div class="glass p-8 rounded-[2rem] min-h-[320px] flex flex-col justify-end border border-white/5 lg:col-span-1 md:col-span-2">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="card-img">
+                <div class="relative z-10">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4 border border-cyan-500/30"><i class="fas fa-rocket text-cyan-400"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Soluciones</h3>
+                    <p class="text-slate-400 text-xs mb-6">Asesoría técnica para transformar tus ideas en proyectos reales.</p>
+                    <a href="#" class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2">SABER MÁS <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
     </main>
 
