@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
         
         body { 
             font-family: 'Inter', sans-serif; 
@@ -76,19 +76,21 @@
             </div>
         </div>
 
+        <!-- Sección de contacto con WhatsApp (solo logo) -->
         <section class="mt-16 text-center glass p-10 rounded-[3rem] border-purple-500/20">
             <h2 class="text-2xl font-bold mb-6 italic text-white">¿Hablamos de tu proyecto?</h2>
             <p class="text-slate-400 mb-8 text-sm">Convierte tus ideas en una herramienta funcional hoy mismo.</p>
-            <a href="https://wa.me/573125443974" class="inline-flex items-center justify-center px-8 py-3 bg-purple-600 hover:bg-purple-500 text-white font-black uppercase tracking-widest rounded-2xl transition-all shadow-lg shadow-purple-900/40">
-                Contactar por WhatsApp
+            <a href="https://wa.me/573125443974" 
+               class="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white w-20 h-20 rounded-full hover:scale-110 transition shadow-xl"
+               aria-label="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp text-5xl"></i>
             </a>
         </section>
     </main>
 
-    <footer class="text-center py-10">
-        <p class="text-[9px] uppercase tracking-[0.4em] text-slate-600">
-            © 2026 XAILON | INNOVACIÓN EN SOFTWARE
-        </p>
+    <!-- Footer unificado con el resto de páginas -->
+    <footer class="text-center py-10 border-t border-white/5">
+        <p class="text-xs uppercase tracking-[0.4em] text-slate-500 px-4 italic">© 2026 XAILON | Innovación Digital</p>
     </footer>
 
 </body>
