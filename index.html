@@ -41,9 +41,6 @@
             transition: all 0.3s ease;
         }
         .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
-        
-        /* Estilo para enlaces internos que no redirigen */
-        .no-link { cursor: pointer; }
     </style>
 </head>
 <body class="text-slate-200">
@@ -55,7 +52,7 @@
     <nav class="max-w-6xl mx-auto p-5 flex justify-between items-center relative z-20">
         <div class="responsive-logo gradient-text px-2">XAILON</div>
         <div class="flex gap-5 text-xl">
-            <a href="https://github.com/kakakarotoo123-del" class="hover:text-blue-400 transition-colors"><i class="fab fa-github"></i></a>
+            <!-- Icono de GitHub eliminado -->
         </div>
     </nav>
 
@@ -65,7 +62,7 @@
         </div>
         <h1 class="responsive-title font-black text-white max-w-4xl mx-auto px-2">
             Impulsando tu<br>
-            <span class="gradient-text italic pr-1">Presencia Digital</span>
+            <span class="gradient-text italic px-1">Presencia Digital</span>
         </h1>
         <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mt-6">
             Creamos experiencias digitales de alto impacto y sistemas a medida para tu negocio.
@@ -79,8 +76,7 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30"><i class="fas fa-code text-blue-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Desarrollo Web</h3>
-                    <!-- Enlace modificado: ya no redirige a página inexistente -->
-                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -89,7 +85,7 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30"><i class="fas fa-laptop-code text-purple-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Sistemas</h3>
-                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -98,7 +94,7 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30"><i class="fas fa-rocket text-cyan-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Soluciones</h3>
-                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -128,8 +124,7 @@
                         <i class="fas fa-paper-plane"></i> ENVIAR SOLICITUD
                     </button>
                     
-                    <!-- Redirige a la misma página después del envío -->
-                    <input type="hidden" name="_next" value="index.html">
+                    <input type="hidden" name="_next" value="https://creaciones.xailon.site/">
                     <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
@@ -140,11 +135,5 @@
         <p class="text-xs uppercase tracking-[0.4em] text-slate-500 px-4 italic">© 2026 XAILON | Innovación Digital</p>
     </footer>
 
-    <!-- Pequeño script para mejorar la experiencia -->
-    <script>
-        // Si el usuario hace clic en "Saber más", mostramos un mensaje amigable
-        // (ya se hace con onclick, pero este script es opcional)
-        console.log('Página cargada sin errores de enlaces.');
-    </script>
 </body>
 </html>
