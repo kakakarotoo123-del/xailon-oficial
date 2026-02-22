@@ -12,14 +12,13 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #060b18;
+            overflow-x: hidden; /* Evita que la página se mueva hacia los lados */
         }
 
         .glass {
             background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
         }
 
         .card-image {
@@ -29,20 +28,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.3;
+            opacity: 0.25;
             z-index: -1;
-            transition: transform 0.5s ease;
-        }
-
-        .card-hover:hover .card-image {
-            transform: scale(1.1);
-            opacity: 0.4;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-10px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .gradient-text {
@@ -52,84 +39,85 @@
         }
 
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(6, 11, 24, 0.8), #060b18), 
+            background-image: linear-gradient(to bottom, rgba(6, 11, 24, 0.9), #060b18), 
                               url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
+        }
+
+        /* Ajuste fino para que las palabras largas no se rompan */
+        h1 {
+            word-break: keep-all;
+            overflow-wrap: break-word;
         }
     </style>
 </head>
 <body class="text-slate-200 min-h-screen">
 
-    <header class="hero-bg text-center py-20 px-4">
-        <nav class="max-w-6xl mx-auto mb-12 flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-black italic tracking-tighter gradient-text">XAILON</div>
+    <header class="hero-bg text-center py-16 md:py-24 px-4">
+        <nav class="max-w-6xl mx-auto mb-10 flex justify-between items-center">
+            <div class="text-xl font-black italic tracking-tighter gradient-text">XAILON</div>
             <div class="flex gap-5">
-                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-lg"></i></a>
-                <a href="https://github.com/kakakarotoo123-del" class="hover:text-blue-400 transition"><i class="fab fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-whatsapp text-xl"></i></a>
+                <a href="https://github.com/kakakarotoo123-del" class="hover:text-blue-400 transition"><i class="fab fa-github text-xl"></i></a>
             </div>
         </nav>
 
         <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest border border-blue-500/30">
-            Desarrollo Web & Software
+            Desarrollo Profesional
         </span>
         
-        <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold mt-6 leading-tight text-white">
-            Impulsando tu <br><span class="gradient-text italic">Presencia Digital</span>
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mt-6 leading-[1.1] text-white max-w-4xl mx-auto">
+            Impulsando tu <br>
+            <span class="gradient-text italic">Presencia Digital</span>
         </h1>
         
-        <p class="mt-6 text-slate-300 text-sm md:text-lg max-w-2xl mx-auto font-light leading-relaxed px-2">
-            Creamos experiencias digitales personalizadas y sistemas eficientes para todo tipo de negocios.
+        <p class="mt-6 text-slate-400 text-sm md:text-lg max-w-xl mx-auto font-light leading-relaxed px-2">
+            Creamos experiencias digitales personalizadas y sistemas eficientes para potenciar tu negocio.
         </p>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <div class="glass p-8 rounded-[2.5rem] card-hover transition-all duration-500 min-h-[320px] flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" class="card-image" alt="Web">
-                <div class="relative">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30">
-                        <i class="fas fa-code text-xl text-blue-400"></i>
+            <div class="glass p-8 rounded-[2rem] relative overflow-hidden min-h-[300px] flex flex-col justify-end border border-white/5 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop" class="card-image">
+                <div class="relative z-10">
+                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 border border-blue-500/30">
+                        <i class="fas fa-code text-blue-400"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 italic text-white">Desarrollo Web</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
-                        Sitios modernos y optimizados para captar la atención de tus clientes.
-                    </p>
-                    <a href="web.html" class="text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Desarrollo Web</h3>
+                    <p class="text-slate-400 text-xs mb-6 leading-relaxed">Sitios modernos optimizados para captar la atención de tus clientes.</p>
+                    <a href="web.html" class="text-blue-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        Saber más <i class="fas fa-arrow-right text-[8px]"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem] card-hover transition-all duration-500 min-h-[320px] flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" class="card-image" alt="Sistemas">
-                <div class="relative">
-                    <div class="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4 border border-indigo-500/30">
-                        <i class="fas fa-laptop-code text-xl text-indigo-400"></i>
+            <div class="glass p-8 rounded-[2rem] relative overflow-hidden min-h-[300px] flex flex-col justify-end border border-white/5 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" class="card-image">
+                <div class="relative z-10">
+                    <div class="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4 border border-indigo-500/30">
+                        <i class="fas fa-laptop-code text-indigo-400"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 italic text-white">Sistemas</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
-                        Herramientas digitales para mejorar la productividad de tu negocio.
-                    </p>
-                    <a href="#" class="text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Sistemas</h3>
+                    <p class="text-slate-400 text-xs mb-6 leading-relaxed">Herramientas digitales diseñadas para mejorar tu productividad.</p>
+                    <a href="#" class="text-indigo-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        Saber más <i class="fas fa-arrow-right text-[8px]"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem] card-hover transition-all duration-500 min-h-[320px] flex flex-col justify-end lg:col-span-1 md:col-span-2">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" class="card-image" alt="Soluciones">
-                <div class="relative">
-                    <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30">
-                        <i class="fas fa-rocket text-xl text-cyan-400"></i>
+            <div class="glass p-8 rounded-[2rem] relative overflow-hidden min-h-[300px] flex flex-col justify-end border border-white/5 shadow-2xl lg:col-span-1 md:col-span-2">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" class="card-image">
+                <div class="relative z-10">
+                    <div class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4 border border-cyan-500/30">
+                        <i class="fas fa-rocket text-cyan-400"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 italic text-white">Soluciones</h3>
-                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
-                        Asesoría técnica para transformar tus ideas en proyectos reales.
-                    </p>
-                    <a href="#" class="text-cyan-400 font-bold text-[10px] uppercase tracking-[0.2em] flex items-center gap-2 hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Soluciones</h3>
+                    <p class="text-slate-400 text-xs mb-6 leading-relaxed">Asesoría técnica para transformar tus ideas en proyectos reales.</p>
+                    <a href="#" class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        Saber más <i class="fas fa-arrow-right text-[8px]"></i>
                     </a>
                 </div>
             </div>
@@ -139,7 +127,7 @@
 
     <footer class="text-center py-10 border-t border-white/5 bg-[#060b18]">
         <p class="text-[9px] uppercase tracking-[0.4em] text-slate-500 px-4">
-            © 2026 XAILON.SITIO | DISEÑO & DESARROLLO PROFESIONAL
+            © 2026 XAILON.SITIO | TECNOLOGÍA PROFESIONAL
         </p>
     </footer>
 
