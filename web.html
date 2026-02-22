@@ -7,9 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
         body { 
+            font-family: 'Inter', sans-serif; 
             background-color: #060b18; 
-            font-family: sans-serif; 
         }
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
@@ -65,6 +66,7 @@
 
         </div>
 
+        <!-- Botón de WhatsApp con logo solamente -->
         <div class="mt-12 p-10 bg-blue-600 rounded-3xl text-center">
             <h3 class="text-2xl font-bold text-white mb-4">
                 ¿Listo para llevar tu negocio al siguiente nivel?
@@ -73,8 +75,9 @@
                 Conversemos y hagamos realidad tu proyecto digital.
             </p>
             <a href="https://wa.me/573125443974" 
-               class="inline-block bg-white text-blue-600 px-8 py-3 rounded-xl font-black uppercase tracking-widest hover:scale-105 transition">
-                Hablar por WhatsApp
+               class="inline-flex items-center justify-center bg-white text-blue-600 w-20 h-20 rounded-full hover:scale-110 transition shadow-xl"
+               aria-label="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp text-5xl"></i>
             </a>
         </div>
 
