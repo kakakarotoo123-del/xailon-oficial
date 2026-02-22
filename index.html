@@ -41,6 +41,9 @@
             transition: all 0.3s ease;
         }
         .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        
+        /* Estilo para enlaces internos que no redirigen */
+        .no-link { cursor: pointer; }
     </style>
 </head>
 <body class="text-slate-200">
@@ -76,7 +79,8 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30"><i class="fas fa-code text-blue-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Desarrollo Web</h3>
-                    <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <!-- Enlace modificado: ya no redirige a página inexistente -->
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -85,7 +89,7 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30"><i class="fas fa-laptop-code text-purple-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Sistemas</h3>
-                    <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -94,7 +98,7 @@
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30"><i class="fas fa-rocket text-cyan-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Soluciones</h3>
-                    <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all no-link" onclick="alert('Más información próximamente')">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -124,7 +128,8 @@
                         <i class="fas fa-paper-plane"></i> ENVIAR SOLICITUD
                     </button>
                     
-                    <input type="hidden" name="_next" value="https://creaciones.xailon.site/">
+                    <!-- Redirige a la misma página después del envío -->
+                    <input type="hidden" name="_next" value="index.html">
                     <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
@@ -135,5 +140,11 @@
         <p class="text-xs uppercase tracking-[0.4em] text-slate-500 px-4 italic">© 2026 XAILON | Innovación Digital</p>
     </footer>
 
+    <!-- Pequeño script para mejorar la experiencia -->
+    <script>
+        // Si el usuario hace clic en "Saber más", mostramos un mensaje amigable
+        // (ya se hace con onclick, pero este script es opcional)
+        console.log('Página cargada sin errores de enlaces.');
+    </script>
 </body>
 </html>
