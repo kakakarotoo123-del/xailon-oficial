@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Soluciones Digitales | XAILON</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #e2e8f0; margin: 0; overflow-x: hidden; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(135deg, #22d3ee, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .responsive-title { font-size: clamp(1.8rem, 8vw, 4rem); line-height: 1.1; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <nav class="max-w-4xl mx-auto p-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-widest text-[10px]">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-10">
+        <header class="mb-12">
+            <h1 class="responsive-title font-black mb-6">Soluciones <br><span class="gradient-text italic">Digitales</span></h1>
+            <p class="text-slate-400 text-base leading-relaxed">Estrategias tecnológicas integrales para transformar tus ideas en negocios reales y rentables.</p>
+        </header>
+
+        <div class="rounded-[2.5rem] overflow-hidden mb-12 border border-white/10 glass">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200" class="w-full h-56 object-cover opacity-50">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass p-8 rounded-3xl">
+                <i class="fas fa-lightbulb text-cyan-400 text-2xl mb-4 block"></i>
+                <h3 class="text-xl font-bold mb-2">Consultoría</h3>
+                <p class="text-slate-400 text-sm">Te asesoramos en la elección de las mejores herramientas para tu proyecto.</p>
+            </div>
+            <div class="glass p-8 rounded-3xl">
+                <i class="fas fa-chart-line text-cyan-400 text-2xl mb-4 block"></i>
+                <h3 class="text-xl font-bold mb-2">Crecimiento</h3>
+                <p class="text-slate-400 text-sm">Escalamos tu presencia digital para alcanzar nuevos mercados.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
