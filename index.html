@@ -9,63 +9,50 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
         
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #020617; 
-            overflow-x: hidden; 
-            margin: 0;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; overflow-x: hidden; margin: 0; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
+        .gradient-text { background: linear-gradient(135deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-bg { background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent), linear-gradient(to bottom, rgba(2, 6, 23, 0.8), #020617), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .card-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.2; z-index: -1; }
+        .responsive-title { font-size: clamp(1.7rem, 8vw, 4.5rem); line-height: 1.2; letter-spacing: -0.02em; }
+        .responsive-logo { font-size: clamp(1.3rem, 6vw, 2rem); font-weight: 900; }
+        
+        /* Formulario */
+        input, textarea { background: rgba(255, 255, 255, 0.05) !important; border: 1px solid rgba(255, 255, 255, 0.1) !important; color: white !important; }
+        input:focus, textarea:focus { border-color: #60a5fa !important; outline: none; background: rgba(255, 255, 255, 0.08) !important; }
 
-        .glass { 
-            background: rgba(30, 41, 59, 0.7); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            position: relative; 
-            overflow: hidden; 
+        /* Botón WhatsApp Flotante */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
         }
-
-        .gradient-text { 
-            background: linear-gradient(135deg, #60a5fa, #c084fc); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-
-        .hero-bg { 
-            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent),
-                        linear-gradient(to bottom, rgba(2, 6, 23, 0.8), #020617), 
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); 
-            background-size: cover; 
-            background-position: center; 
-        }
-
-        .card-img { 
-            position: absolute; 
-            top: 0; left: 0; width: 100%; height: 100%; 
-            object-fit: cover; 
-            opacity: 0.2; 
-            z-index: -1; 
-        }
-
-        .responsive-title { 
-            font-size: clamp(1.7rem, 8vw, 4.5rem); 
-            line-height: 1.2; 
-            letter-spacing: -0.02em;
-            word-break: break-word;
-        }
-
-        .responsive-logo { 
-            font-size: clamp(1.3rem, 6vw, 2rem); 
-            font-weight: 900;
-            letter-spacing: -0.05em;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
     </style>
 </head>
 <body class="text-slate-200">
 
+    <a href="https://wa.me/573125443974" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <nav class="max-w-6xl mx-auto p-5 flex justify-between items-center relative z-20">
         <div class="responsive-logo gradient-text px-2">XAILON</div>
         <div class="flex gap-5 text-xl">
-            <a href="#" class="hover:text-blue-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/kakakarotoo123-del" class="hover:text-blue-400 transition-colors"><i class="fab fa-github"></i></a>
         </div>
     </nav>
 
@@ -73,63 +60,75 @@
         <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
             <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-widest">DESARROLLO PROFESIONAL</span>
         </div>
-        
         <h1 class="responsive-title font-black text-white max-w-4xl mx-auto px-2">
             Impulsando tu<br>
             <span class="gradient-text italic pr-1">Presencia Digital</span>
         </h1>
-        
         <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mt-6">
             Creamos experiencias digitales de alto impacto y sistemas a medida para tu negocio.
         </p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-5 pb-20">
+    <main class="max-w-6xl mx-auto px-5 pb-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end border border-white/5 shadow-xl">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="card-img" alt="Web">
+            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="card-img">
                 <div class="relative z-10">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30">
-                        <i class="fas fa-code text-blue-400 text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30"><i class="fas fa-code text-blue-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Desarrollo Web</h3>
-                    <p class="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">Sitios modernos y optimizados para captar clientes.</p>
-                    <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end border border-white/5 shadow-xl">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="card-img" alt="Sistemas">
+            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="card-img">
                 <div class="relative z-10">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30">
-                        <i class="fas fa-laptop-code text-purple-400 text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30"><i class="fas fa-laptop-code text-purple-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Sistemas</h3>
-                    <p class="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">Soluciones inteligentes para automatizar tus procesos.</p>
-                    <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end border border-white/5 shadow-xl lg:col-span-1 md:col-span-2">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="card-img" alt="Soluciones">
+            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end lg:col-span-1 md:col-span-2">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="card-img">
                 <div class="relative z-10">
-                    <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30">
-                        <i class="fas fa-rocket text-cyan-400 text-xl"></i>
-                    </div>
+                    <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30"><i class="fas fa-rocket text-cyan-400 text-xl"></i></div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Soluciones</h3>
-                    <p class="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">Transformamos tus ideas en herramientas digitales ganadoras.</p>
-                    <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">Saber más <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-
         </div>
+
+        <section class="max-w-2xl mx-auto mt-24 mb-20">
+            <div class="glass p-8 md:p-12 rounded-[3rem] border border-white/10 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-black italic mb-2 uppercase tracking-tighter">Enviar <span class="gradient-text">Mensaje</span></h2>
+                    <p class="text-slate-400 text-sm">Tu consulta será atendida por nuestro equipo técnico.</p>
+                </div>
+
+                <form action="https://formsubmit.co/creacioncreativa45@gmail.com" method="POST" class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-black mb-2 ml-2 text-blue-400">Nombre</label>
+                        <input type="text" name="name" required class="w-full px-6 py-4 rounded-2xl text-sm" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-black mb-2 ml-2 text-blue-400">Email de contacto</label>
+                        <input type="email" name="email" required class="w-full px-6 py-4 rounded-2xl text-sm" placeholder="correo@ejemplo.com">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] font-black mb-2 ml-2 text-blue-400">Mensaje</label>
+                        <textarea name="message" rows="4" required class="w-full px-6 py-4 rounded-2xl text-sm" placeholder="¿En qué te podemos ayudar?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-5 bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-[0.3em] text-[11px] rounded-2xl transition-all shadow-lg shadow-blue-900/40 flex items-center justify-center gap-3">
+                        <i class="fas fa-paper-plane"></i> ENVIAR SOLICITUD
+                    </button>
+                    
+                    <input type="hidden" name="_next" value="https://creaciones.xailon.site/">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="text-center py-10 border-t border-white/5">
