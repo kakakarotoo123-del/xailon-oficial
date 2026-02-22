@@ -46,32 +46,34 @@
             z-index: -1; 
         }
 
-        /* Título fluido en dos líneas */
+        /* Título principal con padding extra y ajuste fino */
         .responsive-title { 
-            font-size: clamp(2rem, 10vw, 4.5rem); 
-            line-height: 1.1; 
+            font-size: clamp(1.8rem, 9vw, 4.5rem); 
+            line-height: 1.2; 
             letter-spacing: -0.02em;
             word-break: break-word;
         }
 
+        /* Logo sin itálica y más compacto */
         .responsive-logo { 
             font-size: clamp(1.3rem, 6vw, 2rem); 
             font-weight: 900;
+            letter-spacing: -0.05em;
         }
     </style>
 </head>
 <body class="text-slate-200">
 
     <nav class="max-w-6xl mx-auto p-5 flex justify-between items-center relative z-20">
-        <div class="responsive-logo italic tracking-tighter gradient-text">XAILON</div>
+        <div class="responsive-logo gradient-text px-2">XAILON</div>
         <div class="flex gap-5 text-xl">
             <a href="#" class="hover:text-blue-400 transition-colors"><i class="fab fa-whatsapp"></i></a>
         </div>
     </nav>
 
-    <header class="hero-bg text-center pt-12 pb-20 px-4">
+    <header class="hero-bg text-center pt-12 pb-20 px-6 md:px-4">
         <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-[0.25em]">Desarrollo Profesional</span>
+            <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-widest">DESARROLLO PROFESIONAL</span>
         </div>
         
         <h1 class="responsive-title font-black text-white max-w-4xl mx-auto">
