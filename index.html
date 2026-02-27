@@ -132,6 +132,16 @@
         }
         .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
     </style>
+
+    <!-- Google Analytics 4 -->
+    <!-- Reemplaza "TU_ID_GA4" por tu ID de GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_GA4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'TU_ID_GA4');
+    </script>
 </head>
 <body class="text-slate-200">
 
@@ -236,6 +246,37 @@
             </p>
         </div>
     </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center gap-3 z-50">
+        <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestras <a href="#" class="underline">políticas de privacidad</a>.</span>
+        <div class="flex gap-2">
+            <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Aceptar</button>
+            <button id="reject-cookies" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Rechazar</button>
+        </div>
+    </div>
+
+    <script>
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const rejectBtn = document.getElementById('reject-cookies');
+
+        if(localStorage.getItem('cookiesAccepted') || localStorage.getItem('cookiesRejected')){
+            banner.style.display = 'none';
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            banner.style.display = 'none';
+            // Aquí puedes habilitar funciones de cookies reales
+        });
+
+        rejectBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesRejected', 'true');
+            banner.style.display = 'none';
+            // Aquí puedes bloquear cookies
+        });
+    </script>
 
 </body>
 </html>
