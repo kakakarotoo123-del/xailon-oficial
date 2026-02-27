@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJT7SMLL');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- SEO Básico -->
     <title>XAILON | Servicios Digitales Profesionales</title>
     <meta name="description" content="Desarrollo web profesional, sistemas digitales y soluciones tecnológicas para impulsar negocios en internet. Creamos experiencias digitales modernas y optimizadas para captar clientes.">
@@ -36,7 +44,7 @@
     <meta name="twitter:description" content="Creamos experiencias digitales de alto impacto para tu negocio.">
     <meta name="twitter:image" content="https://creaciones.xailon.site/preview.jpg">
 
-    <!-- Datos estructurados (Schema.org) -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,89 +71,25 @@
     <!-- Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700;14..32,900&display=swap');
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #020617; 
-            overflow-x: hidden; 
-            margin: 0;
-        }
 
-        .glass { 
-            background: rgba(30, 41, 59, 0.7); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            position: relative; 
-            overflow: hidden; 
-        }
-
-        .gradient-text { 
-            background: linear-gradient(135deg, #60a5fa, #c084fc); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-
-        .hero-bg { 
-            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.15), transparent),
-                        linear-gradient(to bottom, rgba(2, 6, 23, 0.8), #020617), 
-                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); 
-            background-size: cover; 
-            background-position: center; 
-        }
-
-        .card-img { 
-            position: absolute; 
-            top: 0; left: 0; width: 100%; height: 100%; 
-            object-fit: cover; 
-            opacity: 0.2; 
-            z-index: -1; 
-        }
-
-        .responsive-title { 
-            font-size: clamp(1.7rem, 8vw, 4.5rem); 
-            line-height: 1.2; 
-            letter-spacing: -0.02em;
-        }
-
-        .responsive-logo { 
-            font-size: clamp(1.3rem, 6vw, 2rem); 
-            font-weight: 900;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; overflow-x: hidden; margin:0; color:#e2e8f0; }
+        .glass { background: rgba(30,41,59,0.7); backdrop-filter: blur(16px); border:1px solid rgba(255,255,255,0.1); position:relative; overflow:hidden; border-radius:2.5rem; }
+        .gradient-text { background: linear-gradient(135deg,#60a5fa,#c084fc); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .hero-bg { background: radial-gradient(circle at top right, rgba(37,99,235,0.15), transparent), linear-gradient(to bottom, rgba(2,6,23,0.8), #020617), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); background-size: cover; background-position: center; }
+        .card-img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.2; z-index:-1; }
+        .responsive-title { font-size: clamp(1.7rem,8vw,4.5rem); line-height:1.2; letter-spacing:-0.02em; }
+        .responsive-logo { font-size: clamp(1.3rem,6vw,2rem); font-weight:900; }
+        .whatsapp-float { position:fixed; width:60px; height:60px; bottom:20px; right:20px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow:0 4px 15px rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center; transition:all .3s; z-index:100; }
+        .whatsapp-float:hover { transform:scale(1.1); background-color:#128c7e; }
     </style>
-
-    <!-- Google Analytics 4 -->
-    <!-- Reemplaza "TU_ID_GA4" por tu ID de GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_GA4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'TU_ID_GA4');
-    </script>
 </head>
 <body class="text-slate-200">
 
-    <!-- Botón flotante de WhatsApp -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJT7SMLL"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- WhatsApp flotante -->
     <a href="https://wa.me/573125443974" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -154,7 +98,7 @@
     <nav class="max-w-6xl mx-auto p-5 flex justify-between items-center relative z-20">
         <div class="responsive-logo gradient-text px-2">XAILON</div>
         <div class="flex gap-5 text-xl">
-            <!-- Puedes agregar iconos de redes sociales aquí -->
+            <!-- íconos de redes si quieres -->
         </div>
     </nav>
 
@@ -173,69 +117,67 @@
     </header>
 
     <!-- Servicios -->
-    <main class="max-w-6xl mx-auto px-5 pb-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Desarrollo Web -->
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="card-img" alt="Desarrollo Web">
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30">
-                        <i class="fas fa-code text-blue-400 text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Desarrollo Web</h3>
-                    <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Sitios modernos y optimizados para captar clientes.</p>
-                    <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
+    <main class="max-w-6xl mx-auto px-5 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+        <!-- Desarrollo Web -->
+        <div class="glass p-8 flex flex-col justify-end min-h-[320px] relative">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="card-img" alt="Desarrollo Web">
+            <div class="relative z-10">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30">
+                    <i class="fas fa-code text-blue-400 text-xl"></i>
                 </div>
-            </div>
-
-            <!-- Sistemas -->
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="card-img" alt="Sistemas">
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30">
-                        <i class="fas fa-laptop-code text-purple-400 text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Sistemas</h3>
-                    <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Soluciones inteligentes para automatizar tus procesos.</p>
-                    <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Soluciones -->
-            <div class="glass p-8 rounded-[2.5rem] min-h-[320px] flex flex-col justify-end lg:col-span-1 md:col-span-2">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="card-img" alt="Soluciones">
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30">
-                        <i class="fas fa-rocket text-cyan-400 text-xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 text-white">Soluciones</h3>
-                    <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Transformamos tus ideas en herramientas digitales ganadoras.</p>
-                    <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
-                        Saber más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                <h3 class="text-2xl font-bold mb-2 text-white">Desarrollo Web</h3>
+                <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Sitios modernos y optimizados para captar clientes.</p>
+                <a href="web.html" class="inline-flex items-center gap-2 text-blue-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                    Saber más <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
 
-        <!-- Sobre XAILON -->
-        <section class="mt-20 glass p-8 md:p-12 rounded-[3rem] border border-white/10 shadow-2xl text-center">
-            <h2 class="text-3xl font-black italic mb-4 gradient-text">Sobre XAILON</h2>
-            <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                Somos un equipo apasionado por la tecnología y la innovación. Ayudamos a negocios como el tuyo a destacar en el mundo digital con soluciones personalizadas, transparentes y orientadas a resultados. Creemos en el poder de la tecnología para transformar ideas en realidades.
-            </p>
-        </section>
+        <!-- Sistemas -->
+        <div class="glass p-8 flex flex-col justify-end min-h-[320px] relative">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800" class="card-img" alt="Sistemas">
+            <div class="relative z-10">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30">
+                    <i class="fas fa-laptop-code text-purple-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-white">Sistemas</h3>
+                <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Soluciones inteligentes para automatizar tus procesos.</p>
+                <a href="sistemas.html" class="inline-flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                    Saber más <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
 
-        <!-- Botón de contacto -->
-        <div class="text-center mt-20">
-            <a href="contacto.html" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-black py-5 px-10 rounded-full text-sm uppercase tracking-[0.3em] shadow-2xl shadow-blue-900/50 transition-all transform hover:scale-105">
-                <i class="fas fa-envelope"></i> ESCRÍBENOS
-            </a>
+        <!-- Soluciones -->
+        <div class="glass p-8 flex flex-col justify-end min-h-[320px] relative">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="card-img" alt="Soluciones">
+            <div class="relative z-10">
+                <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4 border border-cyan-500/30">
+                    <i class="fas fa-rocket text-cyan-400 text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-white">Soluciones</h3>
+                <p class="text-slate-400 text-sm md:text-base mb-4 leading-relaxed">Transformamos tus ideas en herramientas digitales ganadoras.</p>
+                <a href="soluciones.html" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm uppercase tracking-widest hover:gap-4 transition-all">
+                    Saber más <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </main>
+
+    <!-- Sobre XAILON -->
+    <section class="mt-20 glass p-8 md:p-12 rounded-[3rem] border border-white/10 shadow-2xl text-center max-w-6xl mx-auto">
+        <h2 class="text-3xl font-black italic mb-4 gradient-text">Sobre XAILON</h2>
+        <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Somos un equipo apasionado por la tecnología y la innovación. Ayudamos a negocios como el tuyo a destacar en el mundo digital con soluciones personalizadas, transparentes y orientadas a resultados. Creemos en el poder de la tecnología para transformar ideas en realidades.
+        </p>
+    </section>
+
+    <!-- Botón de contacto -->
+    <div class="text-center mt-20 mb-10">
+        <a href="contacto.html" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-black py-5 px-10 rounded-full text-sm uppercase tracking-[0.3em] shadow-2xl shadow-blue-900/50 transition-all transform hover:scale-105">
+            <i class="fas fa-envelope"></i> ESCRÍBENOS
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="border-t border-white/5 py-10">
@@ -246,37 +188,6 @@
             </p>
         </div>
     </footer>
-
-    <!-- Banner de Cookies -->
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center gap-3 z-50">
-        <span>Usamos cookies para mejorar tu experiencia. Al continuar, aceptas nuestras <a href="#" class="underline">políticas de privacidad</a>.</span>
-        <div class="flex gap-2">
-            <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Aceptar</button>
-            <button id="reject-cookies" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Rechazar</button>
-        </div>
-    </div>
-
-    <script>
-        const banner = document.getElementById('cookie-banner');
-        const acceptBtn = document.getElementById('accept-cookies');
-        const rejectBtn = document.getElementById('reject-cookies');
-
-        if(localStorage.getItem('cookiesAccepted') || localStorage.getItem('cookiesRejected')){
-            banner.style.display = 'none';
-        }
-
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiesAccepted', 'true');
-            banner.style.display = 'none';
-            // Aquí puedes habilitar funciones de cookies reales
-        });
-
-        rejectBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiesRejected', 'true');
-            banner.style.display = 'none';
-            // Aquí puedes bloquear cookies
-        });
-    </script>
 
 </body>
 </html>
